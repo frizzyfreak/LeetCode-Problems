@@ -1,6 +1,6 @@
 #include<algorithm>
-class Solution {
-public:
+class Solution {                //abcabc -> check where it completes the required condition
+public:                         //then get the min of 3 and add 1 to its index and update count everytime
     int numberOfSubstrings(string s) {
         int count=0;
         vector<int> lastseen(3, -1);
