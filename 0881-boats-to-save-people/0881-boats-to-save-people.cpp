@@ -5,10 +5,9 @@ public:
         int n=people.size();
         int i=0,j=n-1;
         int boats=0;
-        int remaining = 0;
         while(i<=j){
             if(i==j){
-                remaining+1;
+                boats+1;
             }
             if(people[i]+people[j]<=limit){
                 boats++;
@@ -17,9 +16,9 @@ public:
             }
             else{
                 j--;
-                remaining++;
+                boats++;
             }
         }
-        return boats+remaining;
+        return boats;
     }
 };
