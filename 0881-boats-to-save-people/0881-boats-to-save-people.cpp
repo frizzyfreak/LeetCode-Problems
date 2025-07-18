@@ -6,18 +6,19 @@ public:
         int i=0,j=n-1;
         int boats=0;
         while(i<=j){
-            if(i==j){
-                boats+1;
-            }
-            if(people[i]+people[j]<=limit){
+            /*if(i==j){
                 boats++;
+            }*/
+            if(people[i]+people[j]<=limit){
+                //boats++;
                 i++;
                 j--;
             }
             else{
                 j--;
-                boats++;
+                //boats++;
             }
+            boats++;
         }
         return boats;
     }
