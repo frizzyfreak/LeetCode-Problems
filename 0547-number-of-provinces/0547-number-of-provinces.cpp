@@ -11,9 +11,8 @@ public:
             que.pop();
 
             for(int v=0;v<n;v++){
-                if(!visited[v] && isConnected[curr][v]==1){
-                    que.push(v);
-                    visited[v]=true;
+                if(!visited[v] && isConnected[u][v]==1){
+                    BFS(isConnected, v,n , visited);
                 }
             }
         }
