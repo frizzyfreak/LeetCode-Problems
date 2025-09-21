@@ -11,9 +11,9 @@ public:
 
         int res=0;
 
-        for(string& word:words){
+        for(auto& word:words){
             string rev=word;
-            reverse(begin(rev), end(rev));
+            reverse(rev.begin(),rev.end());
 
             if(rev!=word){ 
                 if(mp[rev]>0 && mp[word]>0)
