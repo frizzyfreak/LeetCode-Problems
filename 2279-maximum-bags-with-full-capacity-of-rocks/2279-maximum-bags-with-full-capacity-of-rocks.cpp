@@ -12,15 +12,15 @@ public:
         sort(needed.begin(),needed.end());
 
         for(int i=0;i<n;i++){
-            if(needed[i]==0) res++;
+        if(needed[i]==0) res++;
 
-            else if(needed[i]<=additionalRocks){
+        else 
+            {
+                if(needed[i]<=additionalRocks){
                 additionalRocks=additionalRocks-needed[i];
                 res++;
-            }
-
-            else{
-                break;
+                }
+                else break;
             }
         }
         return res;
