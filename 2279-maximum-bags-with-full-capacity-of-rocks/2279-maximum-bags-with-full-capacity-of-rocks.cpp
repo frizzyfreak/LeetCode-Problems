@@ -3,10 +3,10 @@ public:
     int maximumBags(vector<int>& capacity, vector<int>& rocks, int additionalRocks) {
         int n=capacity.size();
         int res=0;
-        vector<int> needed;
+        vector<int> needed(n);
 
         for(int i=0;i<n;i++){
-            needed.push_back(capacity[i]-rocks[i]);
+            needed[i]=(capacity[i]-rocks[i]);
         }
 
         sort(needed.begin(),needed.end());
